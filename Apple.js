@@ -1,8 +1,10 @@
+import { MAX_APPLE_AGE, MAX_APPLE_SIZE, APPLES_COLORS} from "./const.js";
+
 export default class Apple {
     constructor() {
-        this._age = parseInt(Math.random() * 30);
-        this._color = 'green';
-        this._size = 10;
+        this._age = parseInt(Math.random() * MAX_APPLE_AGE);
+        this._color = APPLES_COLORS[parseInt(Math.random() * (APPLES_COLORS.length - 1))];
+        this._size = parseInt(Math.random() * MAX_APPLE_SIZE);
         this._isFresh = 0;
         this._onTree = 0;
     }

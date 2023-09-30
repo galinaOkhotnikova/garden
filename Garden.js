@@ -1,8 +1,10 @@
+import { MAX_APPLES_AMOUNT } from './const.js';
+
 import Tree from './Tree.js';
 
 class Garden {
     constructor(amount) {
-        this._age = 30;
+        this._age = 0;
         this._amount = amount;
         this._trees = [];
     }
@@ -49,7 +51,7 @@ class Garden {
     }
 
     addTree() {
-        let newTree = new Tree(parseInt(Math.random() * 10));
+        let newTree = new Tree(parseInt(Math.random() * MAX_APPLES_AMOUNT));
         newTree.createTree();
         this.trees.push(newTree);
 
