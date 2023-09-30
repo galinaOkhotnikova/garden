@@ -1,11 +1,11 @@
-import { MAX_APPLES_AMOUNT } from './const.js';
+import { MAX_APPLES_AMOUNT, MAX_TREES_AMOUNT } from './const.js';
 
 import Tree from './Tree.js';
 
 class Garden {
-    constructor(amount) {
+    constructor() {
         this._age = 0;
-        this._amount = amount;
+        this._amount = parseInt(Math.random() * MAX_TREES_AMOUNT);;
         this._trees = [];
     }
 
@@ -81,7 +81,7 @@ class Garden {
     }
 }
 
-let garden = new Garden(3);
+let garden = new Garden();
 garden.createGarden();
 garden.passDay();
 garden.getCountApples();
